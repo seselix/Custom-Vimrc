@@ -158,25 +158,81 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 
 "------------------------------------------------------------
-color elflord 
 
+" Own additions:
+
+" Requires Solarized Theme
+" https://ethanschoonover.com/solarized/
+color solarized
+set background=dark
+
+" <F9> and <F10> will switch backgrounds between dark and light
+nnoremap <F9> :set background=dark<Enter>
+nnoremap <F10> :set background=light<Enter>
+
+"color blue
+"color darkblue
+"color desert
+"color default
+"color peachpuff
+
+" Wrapping guideline
+set colorcolumn=120
+
+" <F8> to toggle Relative Line numbers
+nnoremap <F8> :set rnu!<Enter>
+
+" Changed default split dehavior
+set splitbelow
+set splitright
+
+" Add Completing curly brace. 
+" Found other completions to just be more annoying
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" Makes normal mode movement game like, h is insert.
+" Only in normal mode
 nnoremap i k
 nnoremap k j
 nnoremap h i
 nnoremap j h
 
-" Remap :map to F5
+" Remap :make to F5
 noremap <F5> :make<Enter>
 
+" <F3> and <F4> to change tabs
 nnoremap <F3> :tabNext<Enter>
 nnoremap <F4> :tabnext<Enter>
 
 " Changed working directory to current file automatically
 set autochdir
+
+" In normal mode, Enter adds line above cursor, 
+" Shift-Enter adds line below
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-set scrolloff=999
+" Keep Cursor centered on screen as often as possible
+"set scrolloff=999
+" While the previous mapping works, at the end of the file,
+" the effect is undesireable. 
+" The next mappings are better in my opinion, only work
+" with my normal mode movement remappings above
+nnoremap i kzz
+nnoremap k jzz
+" These work with regular normal mode mappings. 
+"nnoremap j jzz
+"nnoremap k kzz
+
+" Center screen after moving by block ( (, ), [, ], {, } )
+nnoremap ]] ]]zz
+nnoremap [[ [[zz
+nnoremap { {zz
+nnoremap } }zz
+nnoremap ( (zz
+nnoremap ) )zz
+
+" Highlight similar words on double-click
+nnoremap <2-LeftMouse> *#
+inoremap <2-LeftMouse> <c-o>*#
