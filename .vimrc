@@ -233,6 +233,22 @@ nnoremap } }zz
 nnoremap ( (zz
 nnoremap ) )zz
 
+" Center screen after G
+nnoremap G Gzz
+
 " Highlight similar words on double-click
 nnoremap <2-LeftMouse> *#
 inoremap <2-LeftMouse> <c-o>*#
+
+" Remove highlighting
+nnoremap <F7> :nohl<Enter>
+
+" :make use mingw32-make.exe
+"set makeprg=mingw32-make
+
+" Turn on backup files
+set backup
+
+" Change directory where vim backups and swp files are saved
+set backupdir=~/vimtmp//,.
+set directory=~/vimtmp//,.
