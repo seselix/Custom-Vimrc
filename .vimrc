@@ -161,11 +161,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 " Own additions:
 
-" Requires Solarized Theme
-" https://ethanschoonover.com/solarized/
-color solarized
-set background=dark
-
 " <F9> and <F10> will switch backgrounds between dark and light
 nnoremap <F9> :set background=dark<Enter>
 nnoremap <F10> :set background=light<Enter>
@@ -173,7 +168,7 @@ nnoremap <F10> :set background=light<Enter>
 "color blue
 "color darkblue
 "color desert
-"color default
+color default
 "color peachpuff
 
 " Wrapping guideline
@@ -252,3 +247,27 @@ set backup
 " Change directory where vim backups and swp files are saved
 set backupdir=~/vimtmp//,.
 set directory=~/vimtmp//,.
+
+" Control + p to paste from last register
+nnoremap <C-p> "0p
+
+" Word Processor Stuff
+func! WordProcessor()
+  " movement changes
+  " normally these are jg and kg
+  map i gkzz
+  map k gjzz
+  " formatting text
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  setlocal wrap
+  setlocal linebreak
+  " spelling and thesaurus
+  setlocal spell spelllang=en_us
+  set thesaurus+=/home/Robert/.vim/thesaurus/mthesaur.txt
+  " complete+=s makes autocompletion search the thesaurus
+  set complete+=s
+  " Set screen size
+  set columns=120
+endfu
+com! WP call WordProcessor()
