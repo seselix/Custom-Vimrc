@@ -188,10 +188,10 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 " Makes normal mode movement game like, h is insert.
 " Only in normal mode
-nnoremap i k
-nnoremap k j
-nnoremap h i
-nnoremap j h
+"nnoremap i k
+"nnoremap k j
+"nnoremap h i
+"nnoremap j h
 
 " Remap :make to F5
 noremap <F5> :make<Enter>
@@ -214,11 +214,11 @@ nmap <CR> o<Esc>
 " the effect is undesireable. 
 " The next mappings are better in my opinion, only work
 " with my normal mode movement remappings above
-nnoremap i kzz
-nnoremap k jzz
+"nnoremap i kzz
+"nnoremap k jzz
 " These work with regular normal mode mappings. 
-"nnoremap j jzz
-"nnoremap k kzz
+nnoremap j jzz
+nnoremap k kzz
 
 " Center screen after moving by block ( (, ), [, ], {, } )
 nnoremap ]] ]]zz
