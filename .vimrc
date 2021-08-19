@@ -139,8 +139,8 @@ set pastetoggle=<F11>
  
 " Indentation settings for using hard tabs for indent. Display tabs as
 " four characters wide.
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
  
  
 "------------------------------------------------------------
@@ -168,11 +168,17 @@ nnoremap <F10> :set background=light<Enter>
 "color blue
 "color darkblue
 "color desert
-color default
+"color default
 "color peachpuff
+"color industry
+
+" For Transparency
+"color koehler
+color transparent
+
 
 " Wrapping guideline
-set colorcolumn=120
+set colorcolumn=80
 
 " <F8> to toggle Relative Line numbers
 nnoremap <F8> :set rnu!<Enter>
