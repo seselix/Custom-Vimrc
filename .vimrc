@@ -251,8 +251,12 @@ nnoremap <F7> :nohl<Enter>
 set backup
 
 " Change directory where vim backups and swp files are saved
-set backupdir=~/vimtmp//,.
-set directory=~/vimtmp//,.
+"set backupdir=~/vimtmp//,.
+"set directory=~/vimtmp//,.
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
 
 " Control + p to paste from last register
 nnoremap <C-p> "0p
