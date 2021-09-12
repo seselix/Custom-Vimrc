@@ -281,3 +281,11 @@ func! WordProcessor()
   set columns=120
 endfu
 com! WP call WordProcessor()
+
+" Org Mode Stuff
+"
+" Use these commands to install the org mode plugin:
+" git clone https://github.com/axvr/org.vim ~/.vim/pack/plugins/start/org
+" vim +'helptags ~/.vim/pack/plugins/start/org/doc/' +q
+" 
+let g:org_clean_folds = 1
