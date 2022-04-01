@@ -261,6 +261,20 @@ set undodir=/tmp//
 " Control + p to paste from last register
 nnoremap <C-p> "0p
 
+" NetRW (Explore) Changes
+" Keep the current directory and the browsing directory synced. 
+" 	This helps you avoid the move files error.
+let g:netrw_keepdir = 0
+" Change the size of the Netrw window when it creates a split. 30%
+let g:netrw_winsize = 30
+" (\) Leader dd: Will open Netrw in the directory of the current file.
+nnoremap <leader>dd :Lexplore %:p:h<CR>
+" (\) Leader da: Will open Netrw in the current working directory.
+nnoremap <Leader>da :Lexplore<CR>
+
+" Auto Complete
+set complete+=kspell
+
 " Word Processor Stuff
 func! WordProcessor()
   " movement changes
