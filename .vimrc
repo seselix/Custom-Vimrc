@@ -170,11 +170,11 @@ nnoremap <F10> :set background=light<Enter>
 "color desert
 "color default
 "color peachpuff
-"color industry
+color industry
 
 " For Transparency
 "color koehler
-color transparent
+"color transparent
 
 
 " Wrapping guideline
@@ -253,9 +253,9 @@ set backup
 " Change directory where vim backups and swp files are saved
 "set backupdir=~/vimtmp//,.
 "set directory=~/vimtmp//,.
-set backupdir=/tmp//
-set directory=/tmp//
-set undodir=/tmp//
+set backupdir=~/tmp//
+set directory=~/tmp//
+set undodir=~/tmp//
 
 
 " Control + p to paste from last register
