@@ -176,7 +176,6 @@ color industry
 "color koehler
 "color transparent
 
-
 " Wrapping guideline
 set colorcolumn=80
 
@@ -200,7 +199,8 @@ inoremap {;<CR> {<CR>};<ESC>O
 "nnoremap j h
 
 " Remap :make to F5
-noremap <F5> :make<Enter>
+"noremap <F5> :make<Enter>
+noremap <F5> :wa<Enter>:sh<Enter>
 
 " <F3> and <F4> to change tabs
 nnoremap <F3> :tabNext<Enter>
