@@ -1,9 +1,10 @@
 # Custom-Vimrc
 
-c.vim, cpp.vim go into:
-	(Windows:)
-	vimfiles\syntax
-	
-the other .vim files to into colors
-	windows:
-	vimfiles\colors
+do:
+```
+cp -a copy/. ~
+```
+
+make sure:
+	xrandr to proper inputs
+	install dmenu, compton, nitrogen, gvim
